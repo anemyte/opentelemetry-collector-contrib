@@ -20,7 +20,7 @@ resourceMetrics:
       - metrics:
           - description: Profiles as histogram with duration
             histogram:
-              aggregationTemporality: 1
+              aggregationTemporality: 2
               dataPoints:
                 - bucketCounts:
                     - "3"
@@ -41,7 +41,7 @@ resourceMetrics:
             name: total.profiles.histogram
           - description: Count total number of profiles as per profile.foo attribute as histogram with duration
             histogram:
-              aggregationTemporality: 1
+              aggregationTemporality: 2
               dataPoints:
                 - attributes:
                     - key: profile.foo
@@ -84,7 +84,7 @@ resourceMetrics:
       - metrics:
           - description: Profiles with resource attribute foo as histogram with duration
             histogram:
-              aggregationTemporality: 1
+              aggregationTemporality: 2
               dataPoints:
                 - bucketCounts:
                     - "3"

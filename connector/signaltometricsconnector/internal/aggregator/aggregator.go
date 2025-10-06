@@ -134,7 +134,7 @@ func (a *Aggregator[K]) Finalize(mds []model.MetricDef[K]) {
 				destMetric.SetUnit(md.Key.Unit)
 				destMetric.SetDescription(md.Key.Description)
 				destExpHist = destMetric.SetEmptyExponentialHistogram()
-				destExpHist.SetAggregationTemporality(pmetric.AggregationTemporalityDelta)
+				destExpHist.SetAggregationTemporality(pmetric.AggregationTemporalityCumulative)
 				destExpHist.DataPoints().EnsureCapacity(len(dpMap))
 			case pmetric.MetricTypeHistogram:
 				destMetric := metrics.AppendEmpty()
@@ -142,7 +142,7 @@ func (a *Aggregator[K]) Finalize(mds []model.MetricDef[K]) {
 				destMetric.SetUnit(md.Key.Unit)
 				destMetric.SetDescription(md.Key.Description)
 				destExplicitHist = destMetric.SetEmptyHistogram()
-				destExplicitHist.SetAggregationTemporality(pmetric.AggregationTemporalityDelta)
+				destExplicitHist.SetAggregationTemporality(pmetric.AggregationTemporalityCumulative)
 				destExplicitHist.DataPoints().EnsureCapacity(len(dpMap))
 			}
 			for _, dp := range dpMap {
@@ -163,7 +163,7 @@ func (a *Aggregator[K]) Finalize(mds []model.MetricDef[K]) {
 			destMetric.SetUnit(md.Key.Unit)
 			destMetric.SetDescription(md.Key.Description)
 			destCounter := destMetric.SetEmptySum()
-			destCounter.SetAggregationTemporality(pmetric.AggregationTemporalityDelta)
+			destCounter.SetAggregationTemporality(pmetric.AggregationTemporalityCumulative)
 			destCounter.DataPoints().EnsureCapacity(len(dpMap))
 			for _, dp := range dpMap {
 				dp.Copy(a.timestamp, destCounter.DataPoints().AppendEmpty())

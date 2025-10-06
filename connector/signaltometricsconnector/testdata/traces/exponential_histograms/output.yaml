@@ -17,7 +17,7 @@ resourceMetrics:
       - metrics:
           - description: Spans with resource attribute including resource.foo as a exponential histogram metric
             exponentialHistogram:
-              aggregationTemporality: 1
+              aggregationTemporality: 2
               dataPoints:
                 - count: "8"
                   max: 17000
@@ -157,7 +157,7 @@ resourceMetrics:
       - metrics:
           - description: Spans with resource attribute including resource.bar as a exponential histogram metric
             exponentialHistogram:
-              aggregationTemporality: 1
+              aggregationTemporality: 2
               dataPoints:
                 - count: "8"
                   max: 17000
@@ -300,7 +300,7 @@ resourceMetrics:
       - metrics:
           - description: Spans with custom count OTTL expression as a exponential histogram metric
             exponentialHistogram:
-              aggregationTemporality: 1
+              aggregationTemporality: 2
               dataPoints:
                 - count: "14"
                   max: 17000
@@ -422,7 +422,7 @@ resourceMetrics:
             unit: ms
           - description: Span duration for HTTP spans as a exponential histogram metric
             exponentialHistogram:
-              aggregationTemporality: 1
+              aggregationTemporality: 2
               dataPoints:
                 - attributes:
                     - key: http.response.status_code
@@ -558,7 +558,7 @@ resourceMetrics:
             unit: ms
           - description: Span duration for DB spans as a exponential histogram metric
             exponentialHistogram:
-              aggregationTemporality: 1
+              aggregationTemporality: 2
               dataPoints:
                 - attributes:
                     - key: db.system
@@ -707,7 +707,7 @@ resourceMetrics:
             unit: ms
           - description: Span duration for messaging spans as a exponential histogram metric
             exponentialHistogram:
-              aggregationTemporality: 1
+              aggregationTemporality: 2
               dataPoints:
                 - attributes:
                     - key: messaging.system

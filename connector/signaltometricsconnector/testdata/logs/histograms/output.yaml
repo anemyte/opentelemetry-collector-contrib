@@ -20,7 +20,7 @@ resourceMetrics:
       - metrics:
           - description: Logrecords as histogram with log.duration from attributes
             histogram:
-              aggregationTemporality: 1
+              aggregationTemporality: 2
               dataPoints:
                 - bucketCounts:
                     - "0"
@@ -41,7 +41,7 @@ resourceMetrics:
             name: total.logrecords.histogram
           - description: Count total number of log records as per log.foo attribute as histogram with log.duration from attributes
             histogram:
-              aggregationTemporality: 1
+              aggregationTemporality: 2
               dataPoints:
                 - attributes:
                     - key: log.foo
@@ -86,7 +86,7 @@ resourceMetrics:
             name: log.foo.histogram
           - description: Count total number of log records as per log.bar attribute as histogram with log.duration from attributes
             histogram:
-              aggregationTemporality: 1
+              aggregationTemporality: 2
               dataPoints:
                 - attributes:
                     - key: log.bar
@@ -149,7 +149,7 @@ resourceMetrics:
       - metrics:
           - description: Logrecords with resource attribute foo as histogram with log.duration from attributes
             histogram:
-              aggregationTemporality: 1
+              aggregationTemporality: 2
               dataPoints:
                 - bucketCounts:
                     - "0"

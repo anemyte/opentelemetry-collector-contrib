@@ -17,7 +17,7 @@ resourceMetrics:
       - metrics:
           - description: A histogram created from gauge values
             histogram:
-              aggregationTemporality: 1
+              aggregationTemporality: 2
               dataPoints:
                 - attributes:
                     - key: datapoint.foo

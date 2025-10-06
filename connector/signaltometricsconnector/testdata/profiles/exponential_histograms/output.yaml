@@ -20,7 +20,7 @@ resourceMetrics:
       - metrics:
           - description: Profiles as exponential histogram with duration
             exponentialHistogram:
-              aggregationTemporality: 1
+              aggregationTemporality: 2
               dataPoints:
                 - count: "3"
                   max: 0
@@ -33,7 +33,7 @@ resourceMetrics:
             name: total.profiles.exphistogram
           - description: Count total number of profiles as per profiles.foo attribute as exponential histogram with duration
             exponentialHistogram:
-              aggregationTemporality: 1
+              aggregationTemporality: 2
               dataPoints:
                 - attributes:
                     - key: profile.foo
@@ -68,7 +68,7 @@ resourceMetrics:
       - metrics:
           - description: Profiles with resource attribute foo as exponential histogram with duration
             exponentialHistogram:
-              aggregationTemporality: 1
+              aggregationTemporality: 2
               dataPoints:
                 - count: "3"
                   max: 0

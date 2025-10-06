@@ -21,14 +21,14 @@ resourceMetrics:
           - description: Count total number of datapoints
             name: total.datapoint.sum
             sum:
-              aggregationTemporality: 1
+              aggregationTemporality: 2
               dataPoints:
                 - asInt: "24"
                   timeUnixNano: "1000000"
           - description: Count total number of datapoints as per datapoint.foo attribute
             name: datapoint.foo.sum
             sum:
-              aggregationTemporality: 1
+              aggregationTemporality: 2
               dataPoints:
                 - asInt: "12"
                   attributes:
@@ -45,7 +45,7 @@ resourceMetrics:
           - description: Count total number of datapoints as per datapoint.bar attribute
             name: datapoint.bar.sum
             sum:
-              aggregationTemporality: 1
+              aggregationTemporality: 2
               dataPoints:
                 - asInt: "6"
                   attributes:

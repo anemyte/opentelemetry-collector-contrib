@@ -20,7 +20,7 @@ resourceMetrics:
       - metrics:
           - description: Spans with resource attribute including resource.foo as a histogram metric
             histogram:
-              aggregationTemporality: 1
+              aggregationTemporality: 2
               dataPoints:
                 - bucketCounts:
                     - "1"
@@ -64,7 +64,7 @@ resourceMetrics:
             unit: ms
           - description: Spans with resource attribute including resource.foo as a exponential histogram metric
             exponentialHistogram:
-              aggregationTemporality: 1
+              aggregationTemporality: 2
               dataPoints:
                 - count: "7"
                   max: 17000
@@ -187,7 +187,7 @@ resourceMetrics:
           - description: Spans with resource attribute including resource.foo as a sum metric
             name: metric.trace.duration
             sum:
-              aggregationTemporality: 1
+              aggregationTemporality: 2
               dataPoints:
                 - asInt: "30902"
                   timeUnixNano: "1000000"

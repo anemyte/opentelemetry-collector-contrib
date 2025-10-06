@@ -17,7 +17,7 @@ resourceMetrics:
       - metrics:
           - description: Spans with resource attribute including resource.foo as a histogram metric
             histogram:
-              aggregationTemporality: 1
+              aggregationTemporality: 2
               dataPoints:
                 - bucketCounts:
                     - "1"
@@ -61,7 +61,7 @@ resourceMetrics:
             unit: ms
           - description: The configured optional attribute will be added as-is
             histogram:
-              aggregationTemporality: 1
+              aggregationTemporality: 2
               dataPoints:
                 - bucketCounts:
                     - "1"
@@ -207,7 +207,7 @@ resourceMetrics:
       - metrics:
           - description: Spans with resource attribute including resource.bar as a histogram metric
             histogram:
-              aggregationTemporality: 1
+              aggregationTemporality: 2
               dataPoints:
                 - bucketCounts:
                     - "1"
@@ -272,7 +272,7 @@ resourceMetrics:
       - metrics:
           - description: Spans with custom count OTTL expression as a histogram metric
             histogram:
-              aggregationTemporality: 1
+              aggregationTemporality: 2
               dataPoints:
                 - bucketCounts:
                     - "2"
@@ -316,7 +316,7 @@ resourceMetrics:
             unit: ms
           - description: Span duration for HTTP spans as a histogram metric
             histogram:
-              aggregationTemporality: 1
+              aggregationTemporality: 2
               dataPoints:
                 - attributes:
                     - key: http.response.status_code
@@ -364,7 +364,7 @@ resourceMetrics:
             unit: ms
           - description: Span duration for DB spans as a histogram metric
             histogram:
-              aggregationTemporality: 1
+              aggregationTemporality: 2
               dataPoints:
                 - attributes:
                     - key: db.system
@@ -412,7 +412,7 @@ resourceMetrics:
             unit: ms
           - description: Span duration for messaging spans as a histogram metric
             histogram:
-              aggregationTemporality: 1
+              aggregationTemporality: 2
               dataPoints:
                 - attributes:
                     - key: messaging.system
