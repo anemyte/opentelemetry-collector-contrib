@@ -1,4 +1,4 @@
-module github.com/open-telemetry/opentelemetry-collector-contrib/connector/signaltometricsconnector
+module github.com/anemyte/opentelemetry-collector-contrib/connector/signaltometricsconnector
 
 go 1.24.0
 
